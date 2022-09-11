@@ -1,0 +1,61 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background : #45badd ;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;     /*//dynamic scale project based on size of window */
+  display: flex;
+  flex-direction: column;  /* when we want to have more than one items in our flex and want them to go top to bolttom not left to right */
+  justify-content: center;
+  align-items: center;
+  background: url('./robot.gif'); /*set robot in bg*/
+  background-size: contain; /*image will be fully visible in screen */
+  background-position: left center; /*slightly left and center*/
+  background-repeat: no-repeat;
+}
+
+button{
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height : 50px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background : #ff3482;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0 , 0 , 0.2);
+}
+
+button:hover{
+  filter : brightness(95%);
+}
+button:active{  /* active will be for when clicked*/
+  transform: scale(0.98);
+}
+button:disabled{
+  cursor: default;
+  filter : brightness(30%);
+}
+
+
+/* Media query: tablet or smaller */
+@media screen and (max-width: 1000px) {
+  .container{
+    background-size: cover;
+    background-position: center center;
+  }
+
+  button{
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
